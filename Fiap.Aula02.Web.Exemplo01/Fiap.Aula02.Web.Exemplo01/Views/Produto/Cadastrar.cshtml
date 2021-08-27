@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h1>Cadastrar</h1>
+
+@if (ViewBag.prod != null)
+{
+<div>
+    @ViewData:
+    @ViewData["nome"]
+    @ViewData["preco"] <br />
+
+    View Bag:
+    @ViewBag.qtd
+    @ViewBag.prod
+</div>
+}
+
+
+<form method="post">
+    <div class="form-group">
+        <label for="id-nome">Nome</label>
+        <input typeof="text" class="form-control" id="id-nome" name="nome"/>
+    </div>
+    <div class="form-group">
+        <label for="id-preco">Preço</label>
+        <input type="text" class="form-control" id="id-preco" name="preco"/>
+
+    </div>
+    <div class="form-group">
+        <label for="id-quantidade">Quantidade</label>
+        <input type="text" class="form-control" id="id-quantidade" name="quantidade"/>
+    </div>
+    <input type="submit" value="Cadastrar" class="btn btn-outline-primary"/>
+</form>
+
