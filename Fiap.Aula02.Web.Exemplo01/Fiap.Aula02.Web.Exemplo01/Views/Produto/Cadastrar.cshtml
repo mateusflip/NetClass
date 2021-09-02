@@ -1,9 +1,17 @@
 ﻿
+
+
 @{
     ViewData["Title"] = "Cadastrar";
 }
 
 <h1>Cadastrar</h1>
+
+<div>TempData:
+        @TempData["msg"]
+        @TempData["nome"]
+        
+    </div>
 
 @if (ViewBag.prod != null)
 {
@@ -14,7 +22,9 @@
 
     View Bag:
     @ViewBag.qtd
-    @ViewBag.prod
+    @ViewBag.prod <br />
+
+
 </div>
 }
 

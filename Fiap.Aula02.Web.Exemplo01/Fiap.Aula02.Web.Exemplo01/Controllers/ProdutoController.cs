@@ -30,7 +30,10 @@ namespace Fiap.Aula02.Web.Exemplo01.Controllers
             ViewBag.qtd = produto.Quantidade;
             ViewBag.prod = produto;
 
-            return View();
+            
+
+            //Envia o produto para a View
+            return View(produto);
             
             //Retorna um texto para o Browser
            // return Content($"Nome: {produto.nome}, Preço: {produto.preco}, Qtd: {produto.quantidade}");
