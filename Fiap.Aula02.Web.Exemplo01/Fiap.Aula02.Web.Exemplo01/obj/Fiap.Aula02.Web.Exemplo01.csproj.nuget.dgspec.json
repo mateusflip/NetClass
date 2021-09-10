@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj": {}
+    "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj": {}
   },
   "projects": {
-    "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj": {
+    "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj",
+        "projectUniqueName": "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj",
         "projectName": "Fiap.Aula02.Web.Exemplo01",
-        "projectPath": "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj",
-        "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-        "outputPath": "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\obj\\",
+        "projectPath": "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01.csproj",
+        "packagesPath": "C:\\Users\\Mateus Ramos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\Fiap.Aula02.Web.Exemplo01\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mateus Ramos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
