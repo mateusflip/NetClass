@@ -1,21 +1,12 @@
-﻿@model Padaria 
-
-@{ 
-    ViewData["Title"] = "Cadastrar";
+﻿@model Padaria
+@{
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Cadastrar Padaria</h1>
+<h1>Editar</h1>
 
-@if(TempData["msg"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["msg"]
-                </div>
-            }
-
-
-
-<form asp-action="cadastrar">
+<form asp-action="editar">
+    <input asp-for="Codigo"/>
     <div class="form-group">
         <label asp-for="Nome"></label>
         <input asp-for="Nome" class="form-control" />
@@ -49,6 +40,6 @@
         <label asp-for="Disponivel"></label>
 
     </div>
-    <input type="submit" class="btn btn-primary" value="Cadastrar"/>
+    <input type="submit" class="btn btn-primary" value="Cadastrar" />
     <a asp-action="index" class="btn btn-dark">Padarias</a>
 </form>
