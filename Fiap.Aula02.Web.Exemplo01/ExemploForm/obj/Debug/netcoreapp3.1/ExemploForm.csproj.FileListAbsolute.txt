@@ -395,3 +395,4 @@ D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\ExemploForm\obj\Debug\netco
 D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\ExemploForm\obj\Debug\netcoreapp3.1\ExemploForm.pdb
 D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\ExemploForm\obj\Debug\netcoreapp3.1\ExemploForm.genruntimeconfig.cache
 D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\ExemploForm\obj\Debug\netcoreapp3.1\Razor\Views\Padaria\Cadastrar.cshtml.g.cs
+D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\ExemploForm\obj\Debug\netcoreapp3.1\Razor\Views\Padaria\Index.cshtml.g.cs
