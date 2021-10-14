@@ -13,13 +13,14 @@ namespace Fiap.Persistencia.Models
         public int FuncionarioId { get; set; }
         [Required, MaxLength(100)]
         public string Nome { get; set; }
-        [Column("Dt_Contratacao")]
+
+        [Column("Dt_Contratacao"), DataType(DataType.Date), Display(Name = "Data de Contração")]
         public DateTime DataContratacao { get; set; }
         public bool Ativo { get; set; }
         [Required]
-        public Genero genero { get; set; }
+        public Genero Genero { get; set; }
         [Required]
-        public decimal salario { get; set; }
+        public decimal Salario { get; set; }
     }
 
     public enum Genero

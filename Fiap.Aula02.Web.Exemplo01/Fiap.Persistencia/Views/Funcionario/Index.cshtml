@@ -1,0 +1,28 @@
+﻿@model List<Funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Funcionários</h1>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Salário</th>
+        <th>Data de Contratação</th>
+        <th>Ativo</th>
+        <th>Gênero</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FuncionarioId</td>
+            <td>@item.Nome</td>
+            <td>@item.Salario.ToString("n")</td>
+            <td>@item.DataContratacao.ToShortDateString()</td>
+            <td>@(item.Ativo?"Ativo" : "Inativo")</td>
+            <td>@item.Genero</td>
+        </tr>
+      }
+</table>

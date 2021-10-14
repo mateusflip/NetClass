@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj": {}
+    "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj": {
+    "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj",
+        "projectUniqueName": "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj",
         "projectName": "ExemploForm",
-        "projectPath": "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj",
-        "packagesPath": "C:\\Users\\Mateus Ramos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mateus Ramos\\Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\obj\\",
+        "projectPath": "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\ExemploForm.csproj",
+        "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
+        "outputPath": "D:\\Novo Downloads\\NetClass\\Fiap.Aula02.Web.Exemplo01\\ExemploForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mateus Ramos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
