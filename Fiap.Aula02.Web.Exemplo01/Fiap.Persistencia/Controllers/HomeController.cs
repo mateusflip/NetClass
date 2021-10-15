@@ -1,4 +1,5 @@
 ﻿using Fiap.Persistencia.Models;
+using Fiap.Persistencia.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,15 +14,21 @@ namespace Fiap.Persistencia.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private FabricaContext _context;
+
+        
+
+        public HomeController(ILogger<HomeController> logger, FabricaContext context)
         {
             _logger = logger;
+            _context = context;
         }
-
         public IActionResult Index()
         {
+            ViewData["qtdFuncionarios"] = _context.Funcionarios.Count();
             return View();
         }
+
 
         public IActionResult Privacy()
         {

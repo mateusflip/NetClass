@@ -11,12 +11,17 @@
 <mensagem texto="@TempData["msg"]"></mensagem>
 
 <form class="form-inline mb-3">
-    <input type="text" name="nomeBusca" class="form-control mr-2" placeholder="Digite o Nome"/>
+    <input type="text" name="nomeBusca" class="form-control mr-2" placeholder="Digite o Nome" />
     <select class="form-control mr-2" name="generoBusca" asp-items="@Html.GetEnumSelectList<Genero>()">
         <option>Genero</option>
     </select>
-    <input type="submit" value="Buscar" class="btn btn-success"/>
+    <input type="submit" value="Buscar" class="btn btn-success" />
 </form>
+
+@if(Model.Count  == 0)
+{
+<mensagem texto="Nenhum Registro Encontrado" class="alert alert-danger"></mensagem>
+}
 
 <a asp-action="cadastrar">Cadastrar</a>
 
@@ -36,7 +41,7 @@
             <td>@item.Nome</td>
             <td>@item.Salario.ToString("n")</td>
             <td>@item.DataContratacao.ToShortDateString()</td>
-            <td>@(item.Ativo?"Ativo" : "Inativo")</td>
+            <td>@(item.Ativo.GetValueOrDefault()?"Ativo" : "Inativo")</td>
             <td>@item.Genero</td>
             <td>
                 <a asp-action="editar" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a>
@@ -62,9 +67,9 @@
             </div>
             <div class="modal-footer">
                 <form asp-action="remover">
-                <input type="hidden" name="id" id="idFuncionario"/>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-                <button type="submit" class="btn btn-primary">Sim</button>
+                    <input type="hidden" name="id" id="idFuncionario" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                    <button type="submit" class="btn btn-primary">Sim</button>
                 </form>
             </div>
         </div>

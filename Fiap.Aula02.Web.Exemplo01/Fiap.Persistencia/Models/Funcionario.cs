@@ -16,7 +16,10 @@ namespace Fiap.Persistencia.Models
 
         [Column("Dt_Contratacao"), DataType(DataType.Date), Display(Name = "Data de Contração")]
         public DateTime DataContratacao { get; set; }
-        public bool Ativo { get; set; }
+        public bool? Ativo { get; set; }
+
+        //? -> Permite o valor ser null
+
         [Required]
         public Genero Genero { get; set; }
         [Required]
