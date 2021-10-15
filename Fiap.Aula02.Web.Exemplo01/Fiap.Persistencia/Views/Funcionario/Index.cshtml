@@ -4,7 +4,22 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Funcionários</h1>
+<h1>
+    Funcionários
+</h1>
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<form class="form-inline mb-3">
+    <input type="text" name="nomeBusca" class="form-control mr-2" placeholder="Digite o Nome"/>
+    <select class="form-control mr-2" name="generoBusca" asp-items="@Html.GetEnumSelectList<Genero>()">
+        <option>Genero</option>
+    </select>
+    <input type="submit" value="Buscar" class="btn btn-success"/>
+</form>
+
+<a asp-action="cadastrar">Cadastrar</a>
+
 <table class="table">
     <tr>
         <th>Id</th>
@@ -23,6 +38,35 @@
             <td>@item.DataContratacao.ToShortDateString()</td>
             <td>@(item.Ativo?"Ativo" : "Inativo")</td>
             <td>@item.Genero</td>
+            <td>
+                <a asp-action="editar" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a>
+                <button onclick="idFuncionario.value = @item.FuncionarioId" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Excluir</button>
+            </td>
         </tr>
-      }
+    }
 </table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Deseja Realmente Exluir o funcionário?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="remover">
+                <input type="hidden" name="id" id="idFuncionario"/>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                <button type="submit" class="btn btn-primary">Sim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fiap.Persistencia.Migrations
 {
     [DbContext(typeof(FabricaContext))]
-    [Migration("20211001010049_Inicio")]
+    [Migration("20211014224432_Inicio")]
     partial class Inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,15 +36,15 @@ namespace Fiap.Persistencia.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("Dt_Contratacao");
 
+                    b.Property<int>("Genero")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("genero")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("salario")
+                    b.Property<decimal>("Salario")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("FuncionarioId");

@@ -16,8 +16,8 @@ namespace Fiap.Persistencia.Migrations
                     Nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Dt_Contratacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false),
-                    genero = table.Column<int>(type: "int", nullable: false),
-                    salario = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Genero = table.Column<int>(type: "int", nullable: false),
+                    Salario = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -18,6 +18,36 @@ namespace Fiap.Persistencia.Controllers
             _context = context;
         }
 
+        public IActionResult Pesquisar(string nomeBusca) {
+            var lista = "";
+            return View(lista);
+        }
+
+        public IActionResult Remover(int id)
+        {
+            var funcionario = _context.Funcionarios.Find(id);//Pesquisar pela PK
+            _context.Funcionarios.Remove(funcionario);
+            _context.SaveChanges();
+            TempData["msg"] = "Funcionário removido com sucesso";
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Editar(int id)
+        {
+            var funcionario = _context.Funcionarios.Find(id);
+            return View(funcionario);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(Funcionario funcionario)
+        {
+            _context.Funcionarios.Update(funcionario);
+            _context.SaveChanges();
+            TempData["msg"] = "Funcionario atualizado";
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public IActionResult Cadastrar(Funcionario funcionario)
         {
@@ -32,9 +62,9 @@ namespace Fiap.Persistencia.Controllers
         {
             return View();
         }
-        public IActionResult Index()
+        public IActionResult Index(string nomeBusca, Genero? generoBusca)
         {
-            var lista = _context.Funcionarios.ToList(); //Recupera todos os funcionários
+            var lista = _context.Funcionarios.Where(f=> (f.Nome.Contains(nomeBusca) || nomeBusca == null) && (generoBusca == f.Genero || generoBusca == null)).ToList(); //Recupera todos os funcionários
             return View(lista);
         }
 

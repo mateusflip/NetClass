@@ -11,7 +11,7 @@ namespace Fiap.Persistencia.Models
     public class Funcionario
     {   [Column("Id")]
         public int FuncionarioId { get; set; }
-        [Required, MaxLength(100)]
+        [Required, MaxLength(100), Column("Nome_Funcionario")]
         public string Nome { get; set; }
 
         [Column("Dt_Contratacao"), DataType(DataType.Date), Display(Name = "Data de Contração")]

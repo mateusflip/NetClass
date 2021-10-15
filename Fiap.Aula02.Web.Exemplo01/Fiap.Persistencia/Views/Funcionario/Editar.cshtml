@@ -1,0 +1,20 @@
+﻿@model Funcionario
+
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Atualizar os dados do funcionário</h1>
+
+<form asp-action="editar">
+
+    <input asp-for="FuncionarioId" />
+
+    <partial name="_Form" />
+
+    <input type="submit" value="Editar" class="btn btn-primary"/>
+    
+
+</form>
+

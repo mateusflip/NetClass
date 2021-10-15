@@ -426,3 +426,4 @@ D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\Fiap.Persistencia\bin\Debug
 D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\Fiap.Persistencia\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Cadastrar.cshtml.g.cs
 D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\Fiap.Persistencia\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\_Form.cshtml.g.cs
 D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\Fiap.Persistencia\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Index.cshtml.g.cs
+D:\Novo Downloads\NetClass\Fiap.Aula02.Web.Exemplo01\Fiap.Persistencia\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Editar.cshtml.g.cs
