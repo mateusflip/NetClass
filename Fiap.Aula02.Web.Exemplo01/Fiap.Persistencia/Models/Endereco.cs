@@ -10,11 +10,13 @@ namespace Fiap.Persistencia.Models
     [Table("Tbl_Endereco")]
     public class Endereco
     {
+        [Column("Id")]
         public int EnderecoId { get; set; }
-        
-        public string Logradouro { get; set; }
-        [Required, MaxLength(9)]
-        public string cep { get; set; }
 
+        [Required, MaxLength(100)]
+        public string Logradouro { get; set; }
+
+        [Required, MaxLength(9)]
+        public string Cep { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Fiap.Persistencia.Models;
 using Fiap.Persistencia.Persistencia;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +65,11 @@ namespace Fiap.Persistencia.Controllers
         }
         public IActionResult Index(string nomeBusca, Genero? generoBusca)
         {
-            var lista = _context.Funcionarios.Where(f=> (f.Nome.Contains(nomeBusca) || nomeBusca == null) && (generoBusca == f.Genero || generoBusca == null)).ToList(); //Recupera todos os funcionários
+            var lista = _context.Funcionarios.Where(f=> 
+            (f.Nome.Contains(nomeBusca) || nomeBusca == null) &&
+            (generoBusca == f.Genero || generoBusca == null))
+                .Include(f => f.Endereco)//Inlclui endereço no resultado da pesquisa
+                .ToList(); //Recupera todos os funcionários
             return View(lista);
         }
 

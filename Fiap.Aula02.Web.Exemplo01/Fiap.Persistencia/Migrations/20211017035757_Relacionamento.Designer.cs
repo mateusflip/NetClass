@@ -4,14 +4,16 @@ using Fiap.Persistencia.Persistencia;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Fiap.Persistencia.Migrations
 {
     [DbContext(typeof(FabricaContext))]
-    partial class FabricaContextModelSnapshot : ModelSnapshot
+    [Migration("20211017035757_Relacionamento")]
+    partial class Relacionamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,8 +76,7 @@ namespace Fiap.Persistencia.Migrations
                     b.Property<string>("Logradouro")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("Logradouro");
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("EnderecoId");
 
@@ -108,9 +109,7 @@ namespace Fiap.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Salario")
                         .HasColumnType("decimal(18,2)");

@@ -33,21 +33,25 @@
         <th>Data de Contratação</th>
         <th>Ativo</th>
         <th>Gênero</th>
+        <th>Endereço</th>
+        <th>Endereço Completo</th>
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.FuncionarioId</td>
-            <td>@item.Nome</td>
-            <td>@item.Salario.ToString("n")</td>
-            <td>@item.DataContratacao.ToShortDateString()</td>
-            <td>@(item.Ativo.GetValueOrDefault()?"Ativo" : "Inativo")</td>
-            <td>@item.Genero</td>
-            <td>
-                <a asp-action="editar" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a>
-                <button onclick="idFuncionario.value = @item.FuncionarioId" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Excluir</button>
-            </td>
-        </tr>
+<tr>
+    <td>@item.FuncionarioId</td>
+    <td>@item.Nome</td>
+    <td>@item.Salario.ToString("n")</td>
+    <td>@item.DataContratacao.ToShortDateString()</td>
+    <td>@(item.Ativo.GetValueOrDefault()?"Ativo" : "Inativo")</td>
+    <td>@item.Genero</td>
+    <td>@item.Endereco?.Logradouro</td>
+    <td>@(item.Endereco == null?"--":item.Endereco.Logradouro + ", CEP:" + item.Endereco.Cep)</td>
+    <td>
+        <a asp-action="editar" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a>
+        <button onclick="idFuncionario.value = @item.FuncionarioId" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Excluir</button>
+    </td>
+</tr>
     }
 </table>
 

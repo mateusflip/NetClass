@@ -25,10 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Migrations\20211014235601_Inicio.cs" />
-    <Compile Include="Migrations\20211014235601_Inicio.Designer.cs" />
-    <Compile Include="Migrations\20211015023804_CampoOpcionalFuncionario.cs" />
-    <Compile Include="Migrations\20211015023804_CampoOpcionalFuncionario.Designer.cs" />
+    <Compile Include="Migrations\20211017035757_Relacionamento.cs" />
+    <Compile Include="Migrations\20211017035757_Relacionamento.Designer.cs" />
+    <Compile Include="Migrations\20211017041351_RelacionamentoSegundo.cs" />
+    <Compile Include="Migrations\20211017041351_RelacionamentoSegundo.Designer.cs" />
+    <Compile Include="Migrations\20211017041656_RelacionamentoTerceiro.cs" />
+    <Compile Include="Migrations\20211017041656_RelacionamentoTerceiro.Designer.cs" />
     <Compile Include="Migrations\FabricaContextModelSnapshot.cs" />
   </ItemGroup>
 
